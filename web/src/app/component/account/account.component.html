@@ -1,0 +1,90 @@
+<div *ngIf="accounts" class="accounts row">
+
+  <div *ngFor="let account of accounts" class="col s12 m6">
+
+    <div class="card">
+
+      <div class="card-content">
+
+        <span class="card-title activator grey-text text-darken-4 dark">
+          <span class="name">{{account.name}}
+            <i class="material-icons right">more_vert</i>
+            <img class="broker-icon" src="assets/brokers/binance.svg">
+          </span>
+        </span>
+
+        <!-- <ng-container *ngFor="let snap of account.snapshot.snapshotVos">
+          <p>
+            {{snap.updateTime | date:'mediumDate'}} : {{snap.data.totalAssetOfBtc}} BTC
+          </p>
+        </ng-container> -->
+        <p>
+          <span class="right">
+            {{account.snapshot.snapshotVos[4].updateTime | date:'mediumDate'}}
+          </span>
+          <br>
+          <br>
+          Balance
+          <br>
+          <span class="balance">
+            {{account.snapshot.snapshotVos[4].data.totalAssetOfBtc}}
+          </span>
+          BTC
+
+        </p>
+
+      </div>
+
+      <div class="card-reveal">
+        <div class="row">
+          <div class="col s5">
+            <p>
+              Maker/Taker: <span class="right">{{account.info.makerCommission}} /
+                {{account.info.takerCommission}}</span>
+              <br>
+              Buyer/Seller: <span class="right">{{account.info.buyerCommission}} /
+                {{account.info.sellerCommission}}</span>
+              <br>
+              Type: <span class="right">{{account.info.accountType}}</span>
+              <br>
+              Permissions: <span class="right">{{account.info.permissions}}</span>
+              <br>
+              Trade: <span class="right">{{account.info.canTrade}}</span>
+              <br>
+              Withdraw: <span class="right">{{account.info.canWithdraw}}</span>
+              <br>
+              Deposit: <span class="right">{{account.info.canDeposit}}</span>
+            </p>
+          </div>
+          <div class="col s1"></div>
+          <div class="col s5">
+            <p></p>
+            <ng-container *ngFor="let asset of account.info.balances">
+              <div class="row" *ngIf="asset.free > 0.00000000">
+                <div class="col s3">
+                  <img class="coin-icon" src="assets/crypto-icons/color/{{asset.asset.toLowerCase()}}.png">
+                  {{asset.asset}}
+                </div>
+                <div class="col s9">
+                  free {{asset.free}}
+                  <br>
+                  lock {{asset.locked}}
+                </div>
+              </div>
+            </ng-container>
+          </div>
+
+          <div class="col s1">
+            <span class="card-title grey-text text-darken-4">
+              <i class="material-icons right">close</i>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

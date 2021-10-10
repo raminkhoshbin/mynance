@@ -1,0 +1,22 @@
+{
+  "name": "mynance-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.12",
+    "got": "^11.1.4",
+    "qs": "^6.9.4"
+  },
+  "author": "Ramin Khoshbin",
+  "license": "ISC"
+}

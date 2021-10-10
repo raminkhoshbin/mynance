@@ -1,0 +1,16 @@
+<nav>
+  <div class="nav-wrapper container">
+    <a class="brand-logo" [routerLink]="['/']">m y n a n c e</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li [routerLinkActive]="['active']">
+        <a [routerLink]="['/dashboard']">Dashboard</a>
+      </li>
+      <li [routerLinkActive]="['active']">
+        <a [routerLink]="['/account']">Accounts</a>
+      </li>
+      <li [routerLinkActive]="['active']">
+        <a [routerLink]="['/trade']">Trade</a>
+      </li>
+    </ul>
+  </div>
+</nav>

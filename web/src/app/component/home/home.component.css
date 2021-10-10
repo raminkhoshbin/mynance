@@ -1,0 +1,22 @@
+h1.mynance {
+  color: #ee6e73;
+}
+
+h3.mynance {
+  color: rgb(71, 68, 68);
+  line-height: 3.3rem;
+  font-size: 2.2rem;
+  text-align: justify;
+}
+
+h5.mynance {
+  line-height: 2.7rem;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.home .card-title {
+  color: #ee6e73;
+}
